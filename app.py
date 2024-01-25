@@ -1,5 +1,5 @@
-from flask import Flask, redirect, render_template, request, url_for  # type: ignore
-from flask_sqlalchemy import SQLAlchemy  # type: ignore
+from flask import Flask, redirect, render_template, request, url_for
+from flask_sqlalchemy import SQLAlchemy
 import string
 import random
 
@@ -11,7 +11,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
 
-class Urls(db.Model):  # type: ignore
+class Urls(db.Model):
     id = db.Column("id", db.Integer, primary_key=True)
     long = db.Column("long", db.String())
     short = db.Column("short", db.String(6))
